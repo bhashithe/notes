@@ -42,3 +42,19 @@ def load_data(inpath):
 ``` python
 random.sample([],k) #random sample of k size of the list
 ```
+## pytorch module
+
+### Dataset class
+``` python
+__len__() # implement to return the length of the whole dataset
+__getitem__() # to get the ith item from the dataset, can return a dictionary also applied transformations
+
+# Vim
+
+Conv2d(..),MaxPool2d(..),Conv2d(..),
+
+``` vim
+" to get rid of commas and replace it with a newline
+%s/),/\r/g
+```
+```
