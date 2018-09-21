@@ -14,6 +14,7 @@ os.getcwd() #returns the current working dir
 ```
 
 A small snippet with image loading from directories
+
 ``` python
 def load_data(inpath):
         """
@@ -48,6 +49,7 @@ random.sample([],k) #random sample of k size of the list
 ``` python
 __len__() # implement to return the length of the whole dataset
 __getitem__() # to get the ith item from the dataset, can return a dictionary also applied transformations
+```
 
 # Vim
 
@@ -56,5 +58,4 @@ Conv2d(..),MaxPool2d(..),Conv2d(..),
 ``` vim
 " to get rid of commas and replace it with a newline
 %s/),/\r/g
-```
 ```
