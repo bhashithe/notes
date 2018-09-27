@@ -45,11 +45,17 @@ random.sample([],k) #random sample of k size of the list
 ```
 ## pytorch module
 
+> If sizes of matrices are different from calculations, you can print the shape of the output in the forward class and then use that size instead
+
 ### Dataset class
+
 ``` python
 __len__() # implement to return the length of the whole dataset
 __getitem__() # to get the ith item from the dataset, can return a dictionary also applied transformations
 ```
+### Conv2d
+
+If the padding parameter is not used, applying convolution will change the dimensions of the image used
 
 # Vim
 
@@ -64,4 +70,12 @@ Conv2d(..),MaxPool2d(..),Conv2d(..),
 
 ## Surround
 
-- Add surrounding for in word: $ysiw$
+- Add surrounding for in word: `ysiw`
+
+# Java
+
+## Collections
+
+### ListIterators
+
+These can traverse the list in either direction
