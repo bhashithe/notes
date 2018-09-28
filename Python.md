@@ -41,6 +41,7 @@ def load_data(inpath):
 ``` python
 random.sample([],k) #random sample of k size of the list
 ```
+
 ## pytorch module
 
 > If sizes of matrices are different from calculations, you can print the shape of the output in the forward class and then use that size instead
@@ -60,11 +61,17 @@ If data is arranged in the following order, it can be loaded via the `ImageFolde
 
 ```
 ./faces/xxx.jpg
-			  yyy.jpg
-				zzz.jpg
+yyy.jpg
+zzz.jpg
 ./vehicles/abc.jpg
-					 def.jpg
+def.jpg
 ```
+
+Best to create dataset dictionary and a dataloader dictionary. [Explained here](https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html#load-data)
+
+### Schedulers
+
+To adjust learning rate using lr_schedulers [documentation] (https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate)
 
 Documentation over [here](https://pytorch.org/docs/stable/torchvision/datasets.html#imagefolder)
 
