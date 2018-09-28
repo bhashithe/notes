@@ -47,10 +47,27 @@ random.sample([],k) #random sample of k size of the list
 
 ### Dataset class
 
+#### Creating Datsets
+
 ``` python
 __len__() # implement to return the length of the whole dataset
 __getitem__() # to get the ith item from the dataset, can return a dictionary also applied transformations
 ```
+
+#### Loading Aranged data
+
+If data is arranged in the following order, it can be loaded via the `ImageFolder` class
+
+```
+./faces/xxx.jpg
+			  yyy.jpg
+				zzz.jpg
+./vehicles/abc.jpg
+					 def.jpg
+```
+
+Documentation over [here](https://pytorch.org/docs/stable/torchvision/datasets.html#imagefolder)
+
 ### Conv2d
 
 If the padding parameter is not used, applying convolution will change the dimensions of the image used
