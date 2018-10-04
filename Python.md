@@ -3,6 +3,13 @@ title: Python Notes
 ---
 # Python modules
 
+## General python
+
+- Instead of `zip` use `izip` which does not create the extra object
+- Instead of items() on a dictionary user iteritems()
+- Creating a dictionary with keys and values in lists, `d = dict(izip(keys, values))`
+- ChainMaps __look this up__
+
 ## OS module
 
 ``` python
@@ -42,9 +49,25 @@ def load_data(inpath):
 random.sample([],k) #random sample of k size of the list
 ```
 
+## importlib module
+
+It is possible to dynamically load modules with this,
+
+``` python
+importlib.import_module(module_name)
+```
+
 ## pytorch module
 
 > If sizes of matrices are different from calculations, you can print the shape of the output in the forward class and then use that size instead
+
+###  GPU
+
+creating variables at GPU is not an inplace method.
+
+``` python
+images = images.to(device)
+```
 
 ### Dataset class
 
@@ -57,7 +80,7 @@ __getitem__() # to get the ith item from the dataset, can return a dictionary al
 
 #### Loading Aranged data
 
-If data is arranged in the following order, it can be loaded via the `ImageFolder` class
+If data is arranged in the following order, it can be loaded via the `torchvision.datasets.ImageFolder` class
 
 ```
 ./faces/xxx.jpg
@@ -78,6 +101,10 @@ Documentation over [here](https://pytorch.org/docs/stable/torchvision/datasets.h
 ### Conv2d
 
 If the padding parameter is not used, applying convolution will change the dimensions of the image used
+
+### DataLoaders
+
+If the batch_size was not specified in the `__init__` it will default to 1
 
 ##  argparse module
 
